@@ -1,8 +1,6 @@
 #WarmUp
 #Hackerrank Bit Manipulation [https://www.hackerrank.com/challenges/maximizing-xor/problem]
 #
-public class Solution
-{
     static int maximizingXor(int l, int r)
     {
         int maxVal = 0;
@@ -14,5 +12,3 @@ public class Solution
 
 
     }
-    
-   }
