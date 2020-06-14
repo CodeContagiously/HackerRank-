@@ -2,13 +2,16 @@
 ##https://www.hackerrank.com/challenges/nested-list/problem?h_r=next-challenge&h_v=zen
 
 
-students = [] #instantiate list for student info: name and grade
-maxGrade = 0.0
-for student in range(int(input())):
-    name = input() #get name of student
-    score = float(input()) #get student grade
-    if maxGrade < score: maxGrade = score
-    info = [name, score] #create a list of student info
-    students.append(info)#add info of student to student List
-
-''' take another approach ''''
+if __name__ == '__main__':
+    List = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        List.append([name, score])
+    Scos = [x[1] for x in List] ## create list of scores only
+    Scos.sort()
+    secMin, Students = Scos[1], [] #get second minimum after sorting list and instantiate stdent list
+    for stdnt in List: 
+        if stdnt[1] == secMin: Students.append(stdnt[0])##add name of student with secMin score in list
+    Students.sort()
+    print(*Students, sep="\n")
